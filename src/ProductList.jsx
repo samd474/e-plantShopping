@@ -3,7 +3,7 @@ import './ProductList.css'
 import CartItem from './CartItem';
 function ProductList() {
     const [showCart, setShowCart] = useState(false); 
-    const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
+    const [showPlants, setShowPlants] = useState(true); // State to control the visibility of the About Us page
 
     const plantsArray = [
         {
@@ -268,7 +268,7 @@ const handlePlantsClick = (e) => {
         </div>
         {!showCart? (
         <div className="product-grid">
-
+            
 
         </div>
  ) :  (
