@@ -268,7 +268,7 @@ const handlePlantsClick = (e) => {
         </div>
         {!showCart? (
         <div className="product-grid">
-            
+            getElementById('root')
 
         </div>
  ) :  (
@@ -277,5 +277,13 @@ const handlePlantsClick = (e) => {
     </div>
     );
 }
-
+return (
+    <div>
+      <ProductList />
+      {plants.map((plant) => (
+        <Product key={plant.id} plant={plant} />
+      ))}
+    <ProductList/>
+    </div>
+);
 export default ProductList;
