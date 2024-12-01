@@ -12,7 +12,7 @@ function ProductList() {
       plants: [
         {
           name: "Snake Plant",
-          image: ".\assets\chloro",
+          image: ".\assets\chlorophytum-3530413_1280.jpg",
           description: "Produces oxygen at night, improving air quality.",
           cost: "$15",
         },
