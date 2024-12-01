@@ -96,7 +96,6 @@ function ProductList() {
   );
 }
 
-export default ProductList;
 
 
   const styleObj = {
@@ -210,6 +209,6 @@ export default ProductList;
       )}
     </div>
   );
-}
+
 
 export default ProductList;
