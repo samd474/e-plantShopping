@@ -30,8 +30,8 @@ function ProductList() {
         },
 
         {
-          name: "Aloe Vera",
-          image: "https://cdn.pixabay.com/photo/2017/09/16/19/21/aloe-plant-2756471_1280.jpg",
+          name: "Spathiphyllum",
+          image: "https://cdn.pixabay.com/photo/2015/06/16/17/25/spathiphyllum-811383_1280.jpg",
           description: "Filters formaldehyde and benzene from the air.",
           cost: "$20",
         },
@@ -44,11 +44,18 @@ function ProductList() {
         },
 
         {
+          name: "Alocasia Botany Plant",
+          image: "https://cdn.pixabay.com/photo/2024/01/31/21/28/alocasia-8544855_1280.jpg",
+          description: "Filters formaldehyde and benzene from the air.",
+          cost: "$20",
+        },
+
+        {
           name: "Aloe Vera",
           image: "https://cdn.pixabay.com/photo/2017/09/16/19/21/aloe-plant-2756471_1280.jpg",
           description: "Filters formaldehyde and benzene from the air.",
           cost: "$20",
-        }
+        },
         // Add more plants here...
       ],
     },
