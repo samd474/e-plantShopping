@@ -52,7 +52,7 @@ body {
     flex-wrap: wrap;
     gap: 50px;
     /* background-color: pink; */
-    /* justify-content: space-between; */
+    justify-content: space-between; 
     padding: 20px;
     width: 100%;
     align-items: center;
@@ -249,4 +249,40 @@ body {
       .ul div {
         text-align: center; /* Align text to the center */
       }
+  }
+
+  .category {
+    margin: 20px 0;
+  }
+  .category h2 {
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+  .plants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .plant {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+  }
+  .plant img {
+    width: 100%;
+    height: auto;
+  }
+  .plant-details {
+    padding: 10px;
+  }
+  .plant-details h3 {
+    margin: 0 0 10px;
+  }
+  .plant-details p {
+    margin: 5px 0;
+  }
+  .plant-details .cost {
+    font-weight: bold;
+    color: green;
   }
