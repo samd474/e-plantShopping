@@ -22,6 +22,12 @@ function ProductList() {
           description: "Filters formaldehyde and xylene from the air.",
           cost: "$12",
         },
+        {
+          name: "Aloe Vera",
+          image: "https://cdn.pixabay.com/photo/2017/09/16/19/21/aloe-plant-2756471_1280.jpg",
+          description: "Filters formaldehyde and benzene from the air.",
+          cost: "$20",
+        },
         // Add more plants here...
       ],
     },
@@ -69,5 +75,21 @@ function ProductList() {
     </div>
   );
 }
+
+{plantsArray.map((category, index) => (
+  <div key={index}>
+      <h1><div>{category.category}</div></h1>
+      <div className="product-list">
+          {category.plants.map((plant, plantIndex) => (
+          <div className="product-card" key={plantIndex}>
+              <img className="product-image" src={plant.image} alt={plant.name} />
+              <div className="product-title">{plant.name}</div>
+              {/*Similarly like the above plant.name show other details like description and cost*/}
+              <button  className="product-button" onClick={() => handleAddToCart(plant)}>Add to Cart</button>
+          </div>
+          ))}
+      </div>
+  </div>
+  ))}
 
 export default ProductList;
