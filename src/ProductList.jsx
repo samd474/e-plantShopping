@@ -12,7 +12,7 @@ function ProductList() {
       plants: [
         {
           name: "Snake Plant",
-          image: ".\assets\chlorophytum-3530413_1280.jpg",
+          image: "./assets/chlorophytum-3530413_1280.jpg", 
           description: "Produces oxygen at night, improving air quality.",
           cost: "$15",
         },
@@ -28,6 +28,27 @@ function ProductList() {
           description: "Filters formaldehyde and benzene from the air.",
           cost: "$20",
         },
+
+        {
+          name: "Aloe Vera",
+          image: "https://cdn.pixabay.com/photo/2017/09/16/19/21/aloe-plant-2756471_1280.jpg",
+          description: "Filters formaldehyde and benzene from the air.",
+          cost: "$20",
+        },
+
+        {
+          name: "Aloe Vera",
+          image: "https://cdn.pixabay.com/photo/2017/09/16/19/21/aloe-plant-2756471_1280.jpg",
+          description: "Filters formaldehyde and benzene from the air.",
+          cost: "$20",
+        },
+
+        {
+          name: "Aloe Vera",
+          image: "https://cdn.pixabay.com/photo/2017/09/16/19/21/aloe-plant-2756471_1280.jpg",
+          description: "Filters formaldehyde and benzene from the air.",
+          cost: "$20",
+        }
         // Add more plants here...
       ],
     },
