@@ -37,81 +37,34 @@ function ProductList() {
     alignItems: "center",
   };
 
-  const linkStyles = {
-    color: "white",
-    fontSize: "18px",
-    textDecoration: "none",
-    margin: "0 10px",
-  };
-
-  const handleCartClick = (e) => {
-    e.preventDefault();
-    setShowCart(true);
-    setShowPlants(false);
-  };
-
-  const handlePlantsClick = (e) => {
-    e.preventDefault();
-    setShowPlants(true);
-    setShowCart(false);
-  };
-
-  const handleContinueShopping = () => {
-    setShowCart(false);
-  };
-
   return (
     <div>
-      {/* Navbar */}
-      <div className="navbar" style={navbarStyles}>
-        <div className="luxury">
-          <img
-            src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png"
-            alt="Paradise Nursery Logo"
-            style={{ height: "50px" }}
-          />
-          <a href="/" style={{ textDecoration: "none", marginLeft: "10px" }}>
-            <div>
-              <h3 style={{ color: "white" }}>Paradise Nursery</h3>
-              <i style={{ color: "white" }}>Where Green Meets Serenity</i>
-            </div>
-          </a>
-        </div>
-        <div>
-          <a href="#" onClick={handlePlantsClick} style={linkStyles}>
-            Plants
-          </a>
-          <a href="#" onClick={handleCartClick} style={linkStyles}>
-            Cart
-          </a>
-        </div>
-      </div>
-
-      {/* Main Content */}
+      <nav style={navbarStyles}>
+        <h1>Plant Shop</h1>
+        <button onClick={() => setShowCart(!showCart)}>
+          {showCart ? "Hide Cart" : "Show Cart"}
+        </button>
+      </nav>
       {!showCart ? (
         <div className="product-grid">
-          {showPlants &&
-            plantsArray.map((category) => (
-              <div key={category.category} className="category">
-                <h2>{category.category}</h2>
-                <div className="plants">
-                  {category.plants.map((plant) => (
-                    <div key={plant.name} className="plant-card">
-                      <img src={plant.image} alt={plant.name} />
-                      <h3>{plant.name}</h3>
-                      <p>{plant.description}</p>
-                      <p>
-                        <strong>Cost: </strong>
-                        {plant.cost}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+          {plantsArray.map((category) => (
+            <div key={category.category}>
+              <h2>{category.category}</h2>
+              <div className="plants-list">
+                {category.plants.map((plant) => (
+                  <div key={plant.name} className="plant-item">
+                    <img src={plant.image} alt={plant.name} />
+                    <h3>{plant.name}</h3>
+                    <p>{plant.description}</p>
+                    <p>{plant.cost}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+          ))}
         </div>
       ) : (
-        <CartItem onContinueShopping={handleContinueShopping} />
+        <CartItem />
       )}
     </div>
   );
